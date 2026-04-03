@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>OFFICIAL LINKS HMPS PGMI UIN MALANG</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-deep: #050505;
+            --maroon-bright: #ff1a1a;
+            --maroon-glass: rgba(128, 0, 0, 0.3);
+            --glass-white: rgba(255, 255, 255, 0.07);
+            --glass-border: rgba(255, 255, 255, 0.12);
+            --text-main: #ffffff;
+        }
+
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            background-color: var(--bg-deep); 
+            color: var(--text-main);
+            margin: 0; padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-x: hidden;
+        }
+
+        /* --- LIQUID BACKGROUND ANIMATION --- */
+        .liquid-bg {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            z-index: -1; overflow: hidden;
+        }
+        .blob {
+            position: absolute; border-radius: 50%; filter: blur(60px);
+            opacity: 0.4; animation: move 15s infinite alternate ease-in-out;
+        }
+        .blob-1 { width: 500px; height: 500px; background: #800000; top: -10%; left: -10%; }
+        .blob-2 { width: 400px; height: 400px; background: #4a0000; bottom: -5%; right: -5%; animation-delay: -4s; }
+        .blob-3 { width: 300px; height: 300px; background: #222; top: 40%; left: 30%; animation-delay: -8s; }
+        
+        @keyframes move {
+            from { transform: translate(0, 0) scale(1) rotate(0deg); }
+            to { transform: translate(60px, 40px) scale(1.2) rotate(45deg); }
+        }
+
+        .container-main {
+            width: 100%;
+            max-width: 420px;
+            padding: 60px 24px;
+            z-index: 10;
+        }
+
+        /* --- HEADER LOGO 3D --- */
+        .header-section {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .logo-3d {
+            width: 110px; height: 110px;
+            margin: 0 auto 20px auto;
+            filter: drop-shadow(0 10px 15px rgba(0,0,0,0.5));
+            animation: float 4s infinite ease-in-out;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        .title-glow {
+            font-weight: 800;
+            font-size: 20px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            background: linear-gradient(to bottom, #fff, #888);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 5px 15px rgba(255,255,255,0.1);
+        }
+
+        /* --- GLASS 3D BUTTONS --- */
+        .glass-btn {
+            width: 100%;
+            background: var(--glass-white);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid var(--glass-border);
+            padding: 18px 25px;
+            margin-bottom: 18px;
+            border-radius: 22px;
+            display: flex;
+            align-items: center;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            text-decoration: none;
+            color: #fff;
+            /* 3D Inner Shadow Effect */
+            box-shadow: 
+                0 15px 35px rgba(0,0,0,0.3),
+                inset 0 1px 1px rgba(255,255,255,0.15),
+                inset 0 -2px 5px rgba(0,0,0,0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .glass-btn:active {
+            transform: scale(0.95) translateY(2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+        }
+
+        .glass-btn::before {
+            content: '';
+            position: absolute; top: 0; left: -100%; width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            transition: 0.5s;
+        }
+        .glass-btn:hover::before { left: 100%; }
+
+        .glass-btn i {
+            font-size: 22px;
+            width: 40px;
+            filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));
+        }
+
+        .btn-text {
+            flex: 1;
+            text-align: center;
+            font-weight: 600;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            margin-right: 40px;
+        }
+
+        /* Highlight Colors for Contrast */
+        .c-wa i { color: #25D366; }
+        .c-web i { color: #ff3333; }
+        .c-ig i { color: #E1306C; }
+        .c-tt i { color: #fff; }
+        .c-yt i { color: #FF0000; }
+        .c-mail i { color: #FFBB00; }
+
+        .section-label {
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: #555;
+            margin: 35px 0 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+        .section-label::before, .section-label::after {
+            content: ""; height: 1px; flex: 1; background: #222;
+        }
+
+        footer {
+            margin-top: 60px;
+            padding-bottom: 40px;
+            text-align: center;
+            opacity: 0.3;
+            font-size: 9px;
+            letter-spacing: 5px;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- LIQUID ANIMATION -->
+    <div class="liquid-bg">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <div class="container-main">
+        <!-- HEADER -->
+        <div class="header-section">
+            <img src="https://res.cloudinary.com/dr3evkwcu/image/upload/v1775195934/logo_hmps_cegqhh.png" alt="Logo HMPS" class="logo-3d">
+            <h1 class="title-glow">HMPS PGMI UIN MALANG</h1>
+        </div>
+
+        <!-- CONTACT SECTION -->
+        <div class="section-label">Pimpinan</div>
+        
+        <a href="https://wa.me/6287866822485" target="_blank" class="glass-btn c-wa">
+            <i class="fab fa-whatsapp"></i>
+            <span class="btn-text">KETUA HIMPUNAN (ANAS)</span>
+        </a>
+
+        <a href="https://wa.me/6285704783686" target="_blank" class="glass-btn c-wa">
+            <i class="fab fa-whatsapp"></i>
+            <span class="btn-text">WAKIL KETUA HIMPUNAN (HASNA)</span>
+        </a>
+
+        <!-- LINKS SECTION -->
+        <div class="section-label">Tautan Resmi</div>
+
+        <a href="https://hmpspgmiuinmalang.web.id/" target="_blank" class="glass-btn c-web">
+            <i class="fas fa-globe"></i>
+            <span class="btn-text">WEBSITE OFFICIAL HMPS</span>
+        </a>
+
+        <a href="https://www.instagram.com/sahabatpgmiuinmlg?igsh=MXAzM3drbWk4cTd2NQ==" target="_blank" class="glass-btn c-ig">
+            <i class="fab fa-instagram"></i>
+            <span class="btn-text">INSTAGRAM HMPS PGMI</span>
+        </a>
+
+        <a href="https://www.tiktok.com/@sahabatpgmiuinmlg" target="_blank" class="glass-btn c-tt">
+            <i class="fab fa-tiktok"></i>
+            <span class="btn-text">TIKTOK HMPS PGMI</span>
+        </a>
+
+        <a href="https://www.instagram.com/pelangipgmi.uinmalang/" target="_blank" class="glass-btn c-ig">
+            <i class="fab fa-instagram"></i>
+            <span class="btn-text">INSTAGRAM PELANGI</span>
+        </a>
+
+        <a href="https://youtube.com/@hmpspgmiuinmalang7341" target="_blank" class="glass-btn c-yt">
+            <i class="fab fa-youtube"></i>
+            <span class="btn-text">YOUTUBE HMPS PGMI</span>
+        </a>
+
+        <a href="mailto:uinmalanghmpspgmi@gmail.com" target="_blank" class="glass-btn c-mail">
+            <i class="fas fa-envelope"></i>
+            <span class="btn-text">EMAIL HMPS PGMI</span>
+        </a>
+
+        <footer>
+            HMPS PGMI • UIN MALANG • MMXXVI
+        </footer>
+    </div>
+
+</body>
+</html>
